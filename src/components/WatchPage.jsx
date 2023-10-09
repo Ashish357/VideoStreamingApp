@@ -14,7 +14,7 @@ import useWatchPageData from '../hooks/useWatchPageData';
 const WatchPage = () => {
     const [showChat, setShowChat] = useState(false);//it should be true for test
     const [searchParams] = useSearchParams();
-    const id = "RPpmw6p1bMM"; //for test we need to hard code this
+    const id = searchParams.get("v"); //for test we need to hard code this
     // "RPpmw6p1bMM"
     // searchParams.get("v");
     if(id==null) {return null};

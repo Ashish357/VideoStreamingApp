@@ -3,7 +3,7 @@ import { YOUTUBE_CHANNEL_DATA_API } from '../utils/constants';
 import moment from 'moment'
 import numeral from 'numeral';
 import { MdThumbUp, MdThumbDown, MdShare } from 'react-icons/md';
-// import ShowMoreText from 'react-show-more-text';
+import ShowMoreText from 'react-show-more-text';
 
 const VideoMetaData = ({ info }) => {
     const [channelLogo, setChannelLogo] = useState([]);
@@ -59,7 +59,7 @@ const VideoMetaData = ({ info }) => {
                     <p className='flex items-center'>{numeral(viewCount).format('0.a')} views  </p>
                     <p><span> {moment(publishedAt).fromNow()} </span></p>
                 </div>
-                {/* <ShowMoreText
+                <ShowMoreText
                     lines={2}
                     more='more'
                     less='Show Less'
@@ -67,7 +67,7 @@ const VideoMetaData = ({ info }) => {
                     expanded={false}
                 >
                     {description}
-                </ShowMoreText> */}
+                </ShowMoreText>
             </div>
         </div>
     )
