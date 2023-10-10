@@ -49,7 +49,7 @@ const SearchResultCard = ({ info }) => {
   }
   return (
     <div className='w-full my-2 flex max-sm:flex-col'>
-      <div className={`rounded-xl relative ${!imageLoaded && `bg-gray-200 ${checkId ? 'w-44 h-28' : 'w-full sm:w-72 h-40'}`}`}>
+      <div className={`rounded-xl relative ${!imageLoaded && `bg-gray-200 ${checkId ? 'w-44 h-28' : 'w-full sm:w-80 h-40'}`}`}>
       <LazyLoadImage src={thumbnails?.medium?.url} alt="thumbnail"
         className={`rounded-xl hover:rounded-none ${checkId ? 'w-44 h-28' : 'w-full h-full'}`}
         afterLoad={() => setImageLoaded(true)}

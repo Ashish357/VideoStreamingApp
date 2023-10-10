@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { YOUTUBE_VIDEOS_BY_CATEGORY } from '../utils/constants';
 import SearchResultCard from './SearchResultCard';
 import { useSelector } from 'react-redux';
+import ShimmerVertical from './ShimmerVertical';
 
 const SearchResult = () => {
     const [searchResults, setSearchResults] = useState(null);
@@ -24,8 +25,7 @@ const SearchResult = () => {
         setSearchResults(json.items);
         // console.log(searchResults[0])
     }
-    // console.log(searchResults);
-    // console.log("rendering...");
+    if(!searchResults) return <ShimmerVertical />
     return (
         <div className={`${isMenuOpen ? 'max-sm:fixed':'max-sm:static mx-2 md:mx-12 my-6'}`}>
             { searchResults && 
